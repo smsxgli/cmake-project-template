@@ -28,11 +28,9 @@ if (CMAKE_C_COMPILER_ID STREQUAL "GNU")
         -fasynchronous-unwind-tables
         # output
         -fno-common
-        -MMD
-        -MP
+        -fno-plt
         # misc
         -pipe
-        -fno-plt
         # sanitizer
         $<$<CONFIG:Debug>:-fsanitize=address,undefined>
         $<$<CONFIG:Debug>:-fno-omit-frame-pointer>
